@@ -1,0 +1,147 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh; /* Ensure page takes up at least the viewport height */
+  }
+  
+  /* Menu Bar Styles */
+  .menu-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-bar .site-name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .menu-bar ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    margin-right: 20px;
+  }
+  
+  .menu-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  .menu-bar ul li a.active {
+    font-weight: bold;
+    color: #f0f0f0;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-image: url('img/swan.png'); /* Replace with your header background image */
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Instagram Feed Section Styles */
+  .instagram-feed {
+    padding: 50px 0;
+    background-color: #fff;
+  }
+  
+  .instagram-feed-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .instagram-feed-content .instagram-item {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  
+  .instagram-feed-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instagram-feed-content p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      height: 300px;
+    }
+  
+    .instagram-feed-content .instagram-item {
+      width: 45%;
+    }
+  }
+  
