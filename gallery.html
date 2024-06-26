@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Photo 1" class="gallery-item" onclick="openFullscreen(this)">
+        <img src="photo2.jpg" alt="Photo 2" class="gallery-item" onclick="openFullscreen(this)">
+        <!-- Add more photos as needed -->
+    </div>
+
+    <div id="fullscreen-view" class="fullscreen">
+        <span class="close" onclick="closeFullscreen()">&times;</span>
+        <img class="fullscreen-image" id="fullscreen-image" src="">
+        <a id="download-link" download>Download</a>
+        <button id="prev" onclick="prevSlide()">&#10094;</button>
+        <button id="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
