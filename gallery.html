@@ -67,6 +67,16 @@
             margin: 1%;
             cursor: pointer;
             transition: transform 0.2s;
+            display: none; /* Initially hide all items */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item.show {
+            display: block; /* Show items that match the search query */
         }
 
         .gallery-item:hover {
@@ -130,6 +140,19 @@
             right: 10px;
         }
 
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
         /* Animations */
         @keyframes fadeIn {
             from {
@@ -170,6 +193,10 @@
                 top: 10px;
                 right: 20px;
             }
+
+            .search-bar input {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -177,19 +204,26 @@
     <div class="menu-bar">
         <a href="index.html">Home</a>
         <a href="portfolio.html">About Dineth</a>
-        
     </div>
 
     <div class="header">
         <img src="img/galleryh.png" alt="Header Image">
-        <div class="header-text">Welcome This is Gallery</div>
-        <p><h5>Click on photo to view on full screen , Click download button to download in 4K qulity.</h5></p>
+        <div class="header-text">Welcome to the Gallery</div>
+        <p><h5>Click on a photo to view it in full screen. Click the download button to download in 4K quality.</h5></p>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for images by tags (e.g., wildlife)">
     </div>
 
     <div class="gallery">
-        <img src="photo1.jpg" alt="Photo 1" class="gallery-item" onclick="openFullscreen(this)">
-        <img src="photo2.jpg" alt="Photo 2" class="gallery-item" onclick="openFullscreen(this)">
-        <!-- Add more photos as needed -->
+        <div class="gallery-item" data-tags="wildlife nature">
+            <img src="photo1.jpg" alt="Photo 1" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item" data-tags="architecture building">
+            <img src="photo2.jpg" alt="Photo 2" onclick="openFullscreen(this)">
+        </div>
+        <!-- Add more photos with appropriate data-tags -->
     </div>
 
     <div id="fullscreen-view" class="fullscreen">
@@ -204,6 +238,18 @@
         let currentIndex = 0;
         const galleryItems = document.querySelectorAll('.gallery-item');
 
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+            galleryItems.forEach(item => {
+                const tags = item.getAttribute('data-tags').toLowerCase();
+                if (tags.includes(searchQuery)) {
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                }
+            });
+        });
+
         function openFullscreen(element) {
             const fullscreen = document.getElementById('fullscreen-view');
             const fullscreenImage = document.getElementById('fullscreen-image');
@@ -212,7 +258,7 @@
             fullscreen.style.display = 'flex';
             fullscreenImage.src = element.src;
             downloadLink.href = element.src;
-            currentIndex = Array.from(galleryItems).indexOf(element);
+            currentIndex = Array.from(galleryItems).indexOf(element.parentElement);
         }
 
         function closeFullscreen() {
@@ -233,8 +279,8 @@
             const fullscreenImage = document.getElementById('fullscreen-image');
             const downloadLink = document.getElementById('download-link');
 
-            fullscreenImage.src = galleryItems[currentIndex].src;
-            downloadLink.href = galleryItems[currentIndex].src;
+            fullscreenImage.src = galleryItems[currentIndex].querySelector('img').src;
+            downloadLink.href = galleryItems[currentIndex].querySelector('img').src;
         }
 
         document.addEventListener('keydown', function(event) {
@@ -246,6 +292,9 @@
                 prevSlide();
             }
         });
+
+        // Initially show all gallery items
+        galleryItems.forEach(item => item.classList.add('show'));
     </script>
 </body>
 </html>
