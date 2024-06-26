@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
+    <title>Gallery | Dineth Gunawardana</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -139,18 +139,51 @@
                 opacity: 1;
             }
         }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .menu-bar a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .header-text {
+                font-size: 2em;
+            }
+
+            .gallery-item {
+                width: 80%;
+                margin: 10px;
+            }
+
+            button {
+                font-size: 20px;
+            }
+
+            a#download-link {
+                font-size: 16px;
+            }
+
+            .close {
+                font-size: 30px;
+                top: 10px;
+                right: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="menu-bar">
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">About Dineth</a>
+        
     </div>
 
     <div class="header">
-        <img src="imgpg.png" alt="Header Image">
-        <div class="header-text">Gallery</div>
+        <img src="img/galleryh.png" alt="Header Image">
+        <div class="header-text">Welcome This is Gallery</div>
+        <p><h5>Click on photo to view on full screen , Click download button to download in 4K qulity.</h5></p>
     </div>
 
     <div class="gallery">
