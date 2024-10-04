@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Friends Finder - Project Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        p,
+        ul,
+        pre {
+            margin: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .code-snippet {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .code-snippet code {
+            display: block;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Dock Container */
+        .dock-container {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .dock {
+            display: flex;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 30px;
+        }
+
+        .dock-item {
+            margin: 0 10px;
+            text-align: center;
+            color: #060e41;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .dock-item i {
+            display: block;
+            font-size: 30px;
+        }
+
+        .dock-item:hover {
+            color: #116bcb;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .github-section iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .previews-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .preview-item {
+            flex: 1 1 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .iframe-preview {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style: inside square;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glass-themed Dock -->
+    <div class="dock-container">
+        <div class="dock">
+            <a href="index.html" class="dock-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="dock-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="projects/" class="dock-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Projects</span>
+            </a>
+            <a href="#" class="dock-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+            <a href="#" class="dock-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Inter Friends Finder (IFF)</h1>
+        <p>Inter Friends Finder (IFF) is a web application designed to provide a safe and educational platform for
+            teenagers, students, and teachers. Unlike mainstream social media platforms, IFF focuses on creating a
+            positive environment for educational support and social connectivity.</p>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Stranger Chat</strong>: Anonymous text chat with a random user, featuring a bad word filter.
+                </li>
+                <li><strong>Voice Chat</strong>: Real-time anonymous voice communication with random users.</li>
+                <li><strong>Video Chat</strong>: Anonymous video chat with safety features like nudity filters
+                    (currently under development).</li>
+                <li><strong>EDU Wall</strong>: A platform for students and teachers to share questions, answers, and
+                    educational content.</li>
+                <li><strong>Inbox</strong>: Add friends from chats and communicate further via direct messages.</li>
+            </ul>
+        </div>
+
+        <!-- New Website Previews Section -->
+        <div class="section">
+            <h2>Website Previews: Inter Friends Finder</h2>
+            <p>Below are some previews of the Inter Friends Finder website:</p>
+
+            <div class="previews-container">
+                <div class="preview-item">
+                    <img src="pp.png" alt="Homepage Preview">
+                </div>
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x300?text=Stranger+Chat+Page" alt="Stranger Chat Preview">
+                </div>
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x300?text=EDU+Wall" alt="EDU Wall Preview">
+                </div>
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x300?text=Inbox+Page" alt="Inbox Preview">
+                </div>
+            </div>
+
+            <h3>Interactive Preview</h3>
+            <p>You can interact with the live demo below:</p>
+
+            <!-- iFrame Embedding the Website -->
+            <iframe src="https://findaguest.online/" class="iframe-preview" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="section">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="http://www.findaguest.online/" target="_blank">Live Demo</a></li>
+                <li><a href="https://github.com/thisisdineth/YCS" target="_blank">Source Code</a></li>
+                <li><a href="https://youtu.be/S32QPlW__YI" target="_blank">How it works (YouTube)</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Created by <strong>Dineth Gunawardana</strong> (Mahanama College, Colombo 3)</p>
+            <p>Email: <a href="mailto:infodinethdil@gmail.com">infodinethdil@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.nextElementSibling;
+            const codeText = codeBlock.textContent;
+            navigator.clipboard.writeText(codeText).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+
+</html>

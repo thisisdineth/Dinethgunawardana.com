@@ -1,0 +1,305 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #3b3b98, #38ada9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #fff;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #f8f8f8;
+    margin-top: 1rem;
+    animation: slideUp 2s ease-out;
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* About Section */
+.about {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #dadae5, #9ededc);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    animation: slideIn 1s ease-out;
+}
+
+.bio {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #0e0000;
+    max-width: 600px;
+    animation: fadeInLeft 1.5s ease-out;
+}
+
+.profile-img {
+    max-width: 300px;
+    border-radius: 50%;
+    animation: zoomIn 1.5s ease-out;
+    margin-top: 20px;
+}
+
+/* Timeline Section */
+.timeline {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-item {
+        margin-bottom: 30px;
+    }
+}
+
+.timeline-item {
+    width: 30%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: #3b3b98;
+    margin-bottom: 1rem;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Dock Container */
+.dock-container {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.dock {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.dock-item {
+    margin: 0 10px;
+    text-align: center;
+    color: #060e41;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dock-item i {
+    display: block;
+    font-size: 30px;
+}
+
+.dock-item:hover {
+    color: #116bcb;
+}
+/* Gallery Section */
+.gallery {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 20px;
+    padding-bottom: 1rem;
+}
+
+.gallery-item {
+    min-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+}
+
+.gallery-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* LinkedIn Section */
+.linkedin {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.linkedin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.badge-base {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* LinkedIn Embedded Posts Section */
+.linkedin-gallery {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.linkedin-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    gap: 20px; /* Space between the iframes */
+    padding-bottom: 1rem;
+}
+
+.linkedin-item {
+    min-width: 504px; /* Keep the width the same */
+    height: auto; /* Height is set by iframe attribute */
+    border: none; /* Remove default border */
+    flex-shrink: 0; /* Prevent shrinking when the viewport is smaller */
+}
+
+/* Custom scrollbar for LinkedIn gallery */
+.linkedin-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.linkedin-container::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 10px;
+}
+
+.linkedin-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

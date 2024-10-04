@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+        <!-- Glass-themed Dock -->
+        <div class="dock-container">
+            <div class="dock">
+                <a href="#" class="dock-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="dock-item">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="projects/" class="dock-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#" class="dock-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+                <a href="#" class="dock-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+        <!-- Projects Section -->
+    <div class="container">
+        <h1 class="title">My Projects</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search for projects..." onkeyup="searchProjects()">
+        </div>
+        <table id="projectTable" class="project-table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Demo Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inter friends Finder Social media web app</td>
+                    <td><a href="interfriends.html" target="_blank">See proposal</a></td>
+                </tr>
+                <tr>
+                    <td>Counceling Genarating website with AI API (ai is disabled now)</td>
+                    <td><a href="" target="_blank">Demo 2</a></td>
+                </tr>
+                <tr>
+                    <td>Quation Genrater and export as PDF</td>
+                    <td><a href="https://example.com/demo3" target="_blank">Demo 3</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
